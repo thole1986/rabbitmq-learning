@@ -2,6 +2,7 @@ package main
 
 import (
 	"log"
+	"time"
 
 	"github.com/rabbitmq/amqp091-go"
 )
@@ -44,4 +45,6 @@ func main() {
 	if err != nil {
 		log.Fatalln("Failed to publish message: ", err)
 	}
+
+	time.Sleep(60 * time.Second)
 }
